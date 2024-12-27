@@ -1,4 +1,6 @@
 import * as React from 'react';
+import "@/global.css";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import renderer from 'react-test-renderer';
 
 import { ThemedText } from '../ThemedText';
