@@ -4,8 +4,8 @@ import React from 'react'
 const ed = () => {
   return (
    <View>
-                <Text>I am 27 years old</Text>
-              </View>
+      <Text>I am 27 years old</Text>
+    </View>
   );
 }
 

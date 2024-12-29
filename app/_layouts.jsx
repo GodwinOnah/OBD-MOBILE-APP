@@ -1,8 +1,13 @@
 import { react } from 'react';
-import { Slot } from 'expo-router';
+import { Stack,Slot } from 'expo-router';
 
-export function App() {
+export default function RooyLayout() {
 
-  return <Slot/>;
+  return (
+    <Stack>
+    <Stack.Screen name="index"/>    
+    </Stack>
+ 
+  )
 
 }
