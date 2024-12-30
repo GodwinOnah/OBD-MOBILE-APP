@@ -8,46 +8,49 @@ module.exports = {
         secondary: {
           DEFAULT: "#FF9C01",
           100: "#FF9001",
-          200: "#FF8E01",
+          200: "#FF8E01"
         },
         black: {
           DEFAULT: "#000",
           100: "#1E1E2D",
-          200: "#232533",
+          200: "#232533"
         },
         white: {
-          100: "#FFFFFF", 
+          100: "#FFFFFF" 
       },
         blue: {
-          100: "#0000FF", 
+          100: "#0000FF" 
       },
         green: {
-          100: "#00FF00", 
+          100: "#00FF00" 
           },
+          deepgreen: {
+            100: "#196f3d" 
+            },
         red: {
-          100: "#FF0000", 
+          100: "#FF0000" 
           },
       
         gray: {
-          100: "#808080",
+          100: "#808080"
         },
        silver: {
-          100: "#C0C0C0",
+          100: "#C0C0C0"
         },
         navy: {
-          100: "#000080",
+          100: "#000080"
         },
         brown: {
-          100: "#ba4a00",
+          100: "#ba4a00"
         },
        ash: {
-          100: "#5d6d7e", 
+          100: "#5d6d7e" 
       },
       darkash: {
-        100: "#454545", 
+        100: "#454545" 
     },
     greenishash: {
-      100: "#109cc2", 
+      100: "#109cc2" 
   },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
