@@ -26,7 +26,7 @@ const TabsLayout = () => {
     screenOptions={{
         tabBarShowLabel:false, //this will remove the default label
         tabBarActiveTintColor:'purple',
-        tabBarInactiveTintColor:'white',
+        tabBarInactiveTintColor:'grey',
         tabBarStyle:{
             backgroundColor:"skyblue",
             height:50

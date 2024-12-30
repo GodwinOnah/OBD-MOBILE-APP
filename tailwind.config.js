@@ -15,10 +15,40 @@ module.exports = {
           100: "#1E1E2D",
           200: "#232533",
         },
-        gray: {
-          100: "#CDCDE0",
-        },
+        white: {
+          100: "#FFFFFF", 
       },
+        blue: {
+          100: "#0000FF", 
+      },
+        green: {
+          100: "#00FF00", 
+          },
+        red: {
+          100: "#FF0000", 
+          },
+      
+        gray: {
+          100: "#808080",
+        },
+       silver: {
+          100: "#C0C0C0",
+        },
+        navy: {
+          100: "#000080",
+        },
+        brown: {
+          100: "#ba4a00",
+        },
+       ash: {
+          100: "#5d6d7e", 
+      },
+      darkash: {
+        100: "#454545", 
+    },
+    greenishash: {
+      100: "#109cc2", 
+  },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
         pextralight: ["Poppins-ExtraLight", "sans-serif"],
@@ -32,5 +62,6 @@ module.exports = {
       },
     },
   },
+},
   plugins: [],
 };

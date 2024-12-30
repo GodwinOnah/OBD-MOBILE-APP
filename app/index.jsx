@@ -1,31 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
-import { View,Text, Button } from 'react-native';
-import {Link} from 'expo-router';
-import RootLayout from '../app/_layout';
+import {ScrollView, View,Text, ImageBackground} from 'react-native';
+import {Link,router} from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {images} from '../constants'
+import CustomButton from './accessories/customButton'
 
 
 export default function App() {
 
   return (
-   
-   <View className="flex-1 items-center justify-center"  
-          style={{backgroundColor:"skyblue"}}>
-        <Text className="text-7xl font-pblack justify-center"
-              style={{ color:"blue"}}>
-           Godwin
-        </Text>
-        <Text className="text-4xl font-pblack justify-center">
-           Welcoms you
-        </Text>
-        <Link href="/profile" style={{fontSize:20, marginTop:200, color:"purple"}}>
-            <Text >
-              Continue &gt;
-            </Text>
-        </Link>
-        <StatusBar style='auto'/>
-    </View>
-
-    
+   <SafeAreaView className="bg-primary, h-full">
+      <ScrollView contentContainerStyle={{height:'100%'}}>
+        <ImageBackground source={images.Obande2} style={{flex:1,width: '100%', height: '100%'}}>
+            <View className="w-full h-full flex-1 items-center justify-center">
+                <Text className="text-7xl font-pblack justify-center text-blue"
+                      style={{ color:"blue"}}>
+                  Godwin
+                </Text>
+                <Text className="text-4xl items-center justify-center text-[40px] text-white">
+                  Welcoms you {"\n"} warmly
+                </Text>
+                <CustomButton 
+                title="Start"
+                handlePress={()=>router.push('/home')}
+                containerStyle="w-[200px] h-[60px] mt-[100px] bg-ash-100 rounded-[200px]"
+                textStyles=" italic text-white text-[30px] font-pregular p-auto"
+                isLoading={false}
+                />
+                {/* <Link href="/home" style={{fontSize:40, marginTop:200, color:"white",backgroundColor:"black"}}>
+                    <Text >
+                      Start &gt;
+                    </Text>
+                </Link> */}
+               
+                <StatusBar style={{ style:"light",backgroundColor:"black"}}/>
+            </View>
+        </ImageBackground>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
