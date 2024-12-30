@@ -1,21 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { View,Text, Button } from 'react-native';
 import {Link} from 'expo-router';
+import RootLayout from '../app/_layout';
+
 
 export default function App() {
 
   return (
+   
    <View className="flex-1 items-center justify-center colors-metal">
-                <Text className="text-4xl">
-                    Hello! Iam Godwin
-                </Text>
-                <Link href="/ed">
-                  <Text >
-                      Click 
-                  </Text>
-                  </Link>
-                <StatusBar style='auto'/>
-              </View>
+        <Text className="text-4xl font-pblack">
+          Hello! Iam Godwin
+        </Text>
+        <Link href="/ed">
+            <Text >
+              Click 
+            </Text>
+        </Link>
+        <StatusBar style='auto'/>
+    </View>
+
+    
   );
 }
 
