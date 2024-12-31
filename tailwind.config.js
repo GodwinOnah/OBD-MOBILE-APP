@@ -21,6 +21,12 @@ module.exports = {
         blue: {
           100: "#0000FF" 
       },
+      gold: {
+        100: "#f1c40f" 
+    },
+        deepgold: {
+          100: "#f1c40f" 
+      },
         green: {
           100: "#00FF00" 
           },

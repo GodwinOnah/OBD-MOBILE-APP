@@ -1,59 +1,49 @@
 import { ScrollView,View, Text } from 'react-native'
-import React from 'react'
+import {React,useState} from 'react'
 import {Link,router} from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../../components/customButton';
 import FormField from '../../components/FormField';
 
 const Signin = () => {
-  return (
-    <SafeAreaView className="h-full"  style={{backgroundColor:'skyblue'}}>
+
+    const [form,setForm] = useState({email:"",password:""});
+    const [isSubmitting,setIsSubmitting] = useState(false);
+  
+    return (
+    <SafeAreaView className="h-full"  style={{backgroundColor:'black'}}>
     <ScrollView contentContainerStyle={{height:'100%'}}>
           <View className="w-full min-h-[85vh] flex-1 items-center justify-center">
             
               <FormField
               title="Email"
-              value=""
+              value={form.email}
               placeholder="Email address"
-              handleChangeText={()=>{}}
-              otherStyles={()=>{}}    
+              handleChangeText={(e)=>setForm({...form,email:e})}
+              otherStyles=""    
               />
                <FormField
               title="Password"
-              value=""
+              value={form.passwrod}
               placeholder="Password"
-              handleChangeText={()=>{}}
-              otherStyles="with-[40px]"            
-              />
-              
-              
-            
+              handleChangeText={(e)=>setForm({...form,password:e})}
+              otherStyles=""            
+              />                     
               <CustomButton 
               title="Login"
               handlePress={()=>router.push('/home')}
-              containerStyle="w-[100px] h-[60px] mt-[100px] bg-deepgreen-100"
-              textStyles="text-white text-[30px] font-pregular p-auto"
-              isLoading={false}
-              />
-            
-            
-              <Text className="text-ash italic mt-[40px]  text-[20px]" >
+              containerStyle="w-[60%] h-[60px] rounded-2xl border-[1px] border-gold-100 mt-[50px] bg-white-100"
+              textStyles="text-black-100 text-[30px] font-pregular p-auto"
+              isLoading={isSubmitting}
+              />           
+              <Text className="italic mt-[40px] text-white-100 text-[20px]" >
                 New User? 
             </Text>  
-            <CustomButton 
-              title="Register"
-              handlePress={()=>router.push('/signup')}
-              containerStyle=""
-              textStyles="underline ml-2  text-[20px] text-white"
-              isLoading={false}
-              />
-             
-        
-              {/* <Link href="/home" style={{fontSize:40, marginTop:200, color:"white",backgroundColor:"black"}}>
+               <Link href="/signup" className="underline text-deepgold-100   text-[20px]">
                   <Text >
-                    Start &gt;
+                    Register
                   </Text>
-              </Link> */}            
+              </Link>            
           </View>  
     </ScrollView>
   </SafeAreaView>
